@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Timeline</title>
+    <title>Timeline</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,16 +15,6 @@
             position: relative;
             max-width: 600px;
             margin: 40px auto;
-        }
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: #bbb;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
         }
         .timeline-item {
             position: relative;
@@ -64,7 +54,10 @@
             font-size: 1.2rem;
             color: #333;
         }
-       
+        .timeline-content p {
+            margin: 5px 0 0;
+            color: #fbf9f9;
+        }
     </style>
 </head>
 <body>
