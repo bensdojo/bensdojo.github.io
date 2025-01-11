@@ -1,22 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Learning Portal</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .navbar-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+        }
+        @media screen and (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+            .navbar .nav-links.show {
+                display: flex;
+            }
+            .navbar-toggle {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Learning Portal</h1>
-    </header>
-    <main>
-        <div class="button-menu">
-            <button class="menu-button" id="Python">Python</button>
-            <button class="menu-button" id="science">Science</button>
-            <button class="menu-button" id="history">History</button>
-            </div>
-        <div id="content">
-            </div>
-    </main>
-    <script src="script.ts"></script>
+    <div class="navbar">
+        <div class="logo">My Website</div>
+        <div class="navbar-toggle" onclick="toggleNavbar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="timeline.html">Timeline</a>
+            <a href="#learning">Learning</a>
+            <a href="#archives">Archives</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleNavbar() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+
+    <div id="timeline" style="padding: 50px; background-color: #f4f4f9;">
+        <h1>Timeline Section</h1>
+        <p>This is the timeline section of the website.</p>
+    </div>
+    <div id="learning" style="padding: 50px; background-color: #e9e9f0;">
+        <h1>Learning Section</h1>
+        <p>This is the learning section of the website.</p>
+    </div>
+    <div id="archives" style="padding: 50px; background-color: #d4d4df;">
+        <h1>Archives Section</h1>
+        <p>This is the archives section of the website.</p>
+    </div>
 </body>
 </html>
