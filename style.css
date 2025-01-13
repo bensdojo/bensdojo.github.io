@@ -60,18 +60,6 @@ body {
     color: #f3a712;
   }
   
-  .burger {
-    display: none;
-    flex-direction: column;
-    gap: 0.3rem;
-    cursor: pointer;
-  }
-  
-  .burger .line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-  }
   
   /* Responsive Design */
   @media screen and (max-width: 768px) {
