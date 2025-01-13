@@ -20,23 +20,79 @@ header h1 {
     font-size: 2.5rem;
 }
 
-nav {
-    background: #555;
-    color: #fff;
-    padding: 0.5rem 0;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    margin: 0;
+  }
+  
+  .nav-links a {
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    color: #f3a712;
+  }
+  
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+  }
+  
+  .burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .burger {
+      display: flex;
+    }
 
 .container {
     width: 80%;

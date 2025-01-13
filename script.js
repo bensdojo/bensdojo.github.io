@@ -41,3 +41,8 @@ function loadPosts() {
 }
 
 loadMoreButton.addEventListener('click', loadPosts);
+
+document.querySelector('.burger').addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  });
